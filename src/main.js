@@ -11,6 +11,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import iView from 'iview';
 
+
 // import BScroll from "better-scroll"
 Vue.use(Vuelazyload)
 Vue.use(ElementUI)

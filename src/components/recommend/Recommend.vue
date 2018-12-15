@@ -3,10 +3,20 @@
         <div class="slider">
             <mt-swipe class="luobo" @change="handleChange">
                 <mt-swipe-item v-for="(item,index) in slider" :key="index" >
-                    <router-link :to="item.linkUrl"><img :src="item.picUrl"></router-link>
+                    <router-link :to="item.linkUrl">
+                            <img :src="item.picUrl">
+                    </router-link>
                 </mt-swipe-item>
             </mt-swipe>
         </div>
+        <!-- <div class="swiper-container">
+            <ul>
+                <li v-for="(item,index) in slider" :key="index">
+                        <img :src="item.picUrl">
+                </li>
+            </ul>
+        </div> -->
+
         <router-view></router-view>
     </div>
 </template>
@@ -22,6 +32,13 @@
        created(){
            this.getlun() 
         //    this.goaxios()
+       },
+       mounted(){
+         
+            // var mySwiper = new Swiper('.swiper-container', {
+	        //    autoplay: true,//可选选项，自动滑动
+            // })
+         
        },
         methods: {
             //在config里的index.js配置
@@ -50,5 +67,9 @@
 <style scoped>
     img{width:100%;height:150px;float:left;position: absolute;top:0;left:0}
     .luobo{width:100%;height:150px;overflow: hidden;position: relative;;}
+    .swiper-container{
+        position:fixed;
+        top:40px;
 
+    }
 </style>

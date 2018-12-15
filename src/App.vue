@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <Header/>
-    <keep-alive>
-      <router-view></router-view>
-    </keep-alive>
+    <transition>
+        <router-view></router-view>
+    </transition>
     <player></player>
   </div>
 </template>
@@ -28,6 +28,16 @@
 body{
   background:gray;background:rgba(0.2,0,0,0.1)
 }
-
+.v-enter{
+  opacity: 0;
+ transform:translate(100%)
+}
+.v-leave-to{
+ transform: translate(-100%);
+ position: absolute
+}
+.v-enter-active, .v-leave-active{
+  transition: all 0.5s ease
+}
 </style>
 
