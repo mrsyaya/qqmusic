@@ -10,7 +10,8 @@ import "./assets/iconfont/iconfont.js"
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import iView from 'iview';
-
+import fastclick from 'fastclick'
+fastclick.attach(document.body) //body上的所有元素都没有300ms延迟了
 
 // import BScroll from "better-scroll"
 Vue.use(Vuelazyload)

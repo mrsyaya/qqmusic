@@ -3,21 +3,19 @@
         <div class="slider">
             <mt-swipe class="luobo" @change="handleChange">
                 <mt-swipe-item v-for="(item,index) in slider" :key="index" >
-                    <router-link :to="item.linkUrl">
                             <img :src="item.picUrl">
-                    </router-link>
+
                 </mt-swipe-item>
             </mt-swipe>
         </div>
-        <!-- <div class="swiper-container">
-            <ul>
-                <li v-for="(item,index) in slider" :key="index">
-                        <img :src="item.picUrl">
-                </li>
-            </ul>
-        </div> -->
-
-        <router-view></router-view>
+        <div class="comment">
+            <div class="plun">
+                <span class="pun">发表评论</span>
+            </div>
+            <hr/>
+            <textarea maxlength="300" class="content" placeholder="期待你的神评论···"></textarea>
+            <mt-button type="primary" size="large" >提交</mt-button>
+        </div>
     </div>
 </template>
 <script>
@@ -71,5 +69,25 @@
         position:fixed;
         top:40px;
 
+    }
+    .plun{
+        display:flex;
+        justify-content: space-between;
+    }
+    .comment .pun{
+        font-size:20px;
+        font-weight:600;
+        margin-top:10px;
+    }
+    .content{
+    border: solid 1px #ececec;
+    background-color: #f5f5f5;
+    height:50px;
+    overflow: hidden;
+    width:100%;
+    border-radius: 5px;
+    resize:none;
+    margin-top:3px;
+    text-indent: 1em;
     }
 </style>

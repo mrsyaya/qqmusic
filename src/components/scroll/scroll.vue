@@ -95,6 +95,7 @@
             click: this.click,
             scrollX: this.scrollX,
             mouseWheel: true, 
+            tap:true
           })
   
           // 是否派发滚动事件

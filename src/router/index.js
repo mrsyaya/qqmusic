@@ -28,7 +28,7 @@ const SingUp = (resolve) => {
 Vue.use(Router)
 
 const routes=[
-  {path:'/',redirect:'/singin'},
+  {path:'/',redirect:'/recommend'},
   {path:'/recommend',component:Recommend},
   {path:'/singer',component:Singer,
    children:[
